@@ -8,15 +8,10 @@ function verificarLogin(event) {
     const login = document.querySelector("#login").value.trim()
     const senha = document.querySelector("#senha").value.trim()
 
-    if (login == 'admin') {
-        if (senha == '1234') {
-            window.location.href = "https://www.google.com"
-        } else {
-            window.alert("Senha errada")
-            console.log("Senha errada")
-        }
-    } else {
-        window.alert("Login errado")
-        console.log("Login errado")
+    if (login == 'admin' && senha == 'rute') {
+        window.location.href = "/main.html"
+    }
+    else {
+        document.querySelector("#aviso").classList.add("active")
     }
 }
