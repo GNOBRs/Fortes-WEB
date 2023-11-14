@@ -1,6 +1,6 @@
 :root {
     --cor-fundo-corpo: rgb(106, 108, 255);
-    --cor-fundo-foco: rgba(240, 248, 255, .9);
+    --cor-fundo-foco: rgb(240, 248, 255);
     --cor-borda-focus: rgb(52, 55, 255);
 }
 
