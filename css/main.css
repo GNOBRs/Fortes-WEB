@@ -4,6 +4,30 @@
     grid-template-rows: 1fr;
 }
 
+.dia {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem repeat(5, 1fr);
+    padding: 5px;
+}
+
+.horas {
+    display: flex;
+    text-align: center;
+    padding: 2px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.borda {
+    border-bottom: 2px dotted black;
+}
+
+.titulo-container {
+    grid-area: 1 / 1;
+    border-bottom: 2px dotted black;
+}
+
 #hora {
     grid-area: 1 / 1;
 }
@@ -21,6 +45,7 @@
 #terca {
     grid-area: 1 / 4;
     border-right: 2px dashed black;
+
 }
 
 #quarta {
@@ -36,14 +61,30 @@
 #sexta {
     grid-area: 1 / 7;
     border-right: 2px dashed black;
+
 }
 
 #sabado {
     grid-area: 1 / 8;
+
 }
 
 h1 {
     text-align: center;
     font-size: 1.5rem;
     margin: 1.4rem;
+}
+
+.ativo {
+    background-color: var(--cor-fundo-corpo);
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.refeicao {
+    margin: auto .5rem;
+    border-bottom: 2px dotted black;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }

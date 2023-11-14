@@ -19,12 +19,5 @@ body {
 .conteudo {
     grid-area: 1 / 2 / span 13 / span 11;
     background-color: var(--cor-fundo-foco);
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    box-shadow: .3rem .3rem 20px black;
-}
-
-p {
-    margin: 2rem 5rem;
-    font-size: 1.2rem;
+    box-shadow: .2rem .2rem 20px black;
 }

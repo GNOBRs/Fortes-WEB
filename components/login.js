@@ -8,10 +8,12 @@ function verificarLogin(event) {
     const login = document.querySelector("#login").value.trim()
     const senha = document.querySelector("#senha").value.trim()
 
-    if (login == 'admin' && senha == 'rute') {
+    if (login == 'cliente@fortes.com.br' && senha == 'rute') {
         window.location.href = "/main.html"
     }
-    else {
-        document.querySelector("#aviso").classList.add("active")
+    else if (login == 'fornecedor@fortes.com.br' && senha == 'root') {
+        window.location.href = "/admin.html"
+    } else {
+        document.querySelector("#aviso").innerHTML = 'Login ou senha errados'
     }
 }

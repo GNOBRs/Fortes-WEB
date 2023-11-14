@@ -13,24 +13,29 @@ body {
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 7px;
-    border: 1px solid black;
+    padding: 2rem;
+    min-height: 40vh;
+    width: 100%;
+}
+
+#logomarca {
+    max-width: 20rem;
 }
 
 div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 50%;
 }
 
-label,
-input {
+#divCima {
     margin-bottom: 1.4rem;
 }
 
 input {
     border-radius: 5px;
-    border: 1px solid black;
+    border: 2px inset black;
     height: 1.5rem;
     width: 70%;
     font-size: 1.1rem;
@@ -39,7 +44,14 @@ input {
 }
 
 input:focus {
-    border: 2.5px solid var(--cor-borda-focus);
+    border: 2px inset var(--cor-borda-focus);
+}
+
+.active {
+    margin: 1rem;
+    color: red;
+    font-weight: 600;
+    height: 1rem;
 }
 
 #botaoLogin {
@@ -47,27 +59,14 @@ input:focus {
     font-weight: 500;
     padding: .2rem .4rem;
     border-radius: .4rem;
-    border: 1px solid black;
-    box-shadow: 0 0 3px black;
+    border: 2px outset black;
     margin-bottom: 1.4rem;
+    outline: none;
+    background-color: var(--cor-fundo-foco);
 }
 
 #botaoLogin:hover {
-    border: 2.5px solid var(--cor-borda-focus);
-    box-shadow: 0 0 5px var(--cor-borda-focus);
-}
-
-#logomarca {
-    width: 20rem;
-}
-
-.hidden {
-    display: none;
-}
-
-.active {
-    display: block;
-    margin-bottom: 1.4rem;
-    color: red;
-    font-weight: 600;
+    border: 2px inset var(--cor-borda-focus);
+    box-shadow: 2px 2px 5px var(--cor-borda-focus);
+    background-color: rgb(219, 219, 219)
 }
