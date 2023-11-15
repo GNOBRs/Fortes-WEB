@@ -1,7 +1,51 @@
+.pop-up {
+    position: absolute;
+    top: -50vh;
+    left: -50vw;
+    width: 40vw;
+    height: 40vh;
+    z-index: 1;
+    background-color: var(--cor-fundo-foco);
+    background-color: var(--cor-fundo-foco);
+    box-shadow: .2rem .2rem 20px black;
+    padding: 1.5rem;
+}
+
+#info {
+    cursor: pointer;
+}
+
+#x {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #f40006;
+}
+
+button>i {
+    pointer-events: none;
+}
+
+.abrePopUp {
+    top: 30vh;
+    left: 30vw;
+}
+
+input[type='radio'] {
+    accent-color: var(--cor-fundo-corpo);
+}
+
+#titulo-hora {
+    border-right: 2px dotted black;
+}
+
 .conteudo {
     display: grid;
     grid-template-columns: 4rem repeat(7, 1fr);
     grid-template-rows: 1fr;
+    z-index: 0;
 }
 
 .dia {
@@ -75,10 +119,30 @@ h1 {
     margin: 1.4rem;
 }
 
+h2 {
+    margin-bottom: 1rem;
+}
+
+section>p,
+li {
+    margin: 1.5rem;
+    font-size: 1.2rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    list-style: disc;
+}
+
 .ativo {
     background-color: var(--cor-fundo-corpo);
     border-radius: 3px;
-    border: 1px solid black;
+}
+
+.refeicao.ativo:hover {
+    box-shadow: .2rem .2rem 40px black;
+    outline: 1px solid black;
+    cursor: pointer;
 }
 
 .refeicao {

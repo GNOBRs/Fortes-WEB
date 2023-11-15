@@ -17,10 +17,13 @@
 </head>
 
 <body>
+    <section class="pop-up" id="pop">
+        <i class="fa-solid fa-xmark" style="color: #f40006;" id="x"></i>
+    </section>
     <section class="conteudo">
         <div id="hora" class="dia">
-            <div class="titulo-container">
-                <h1></h1>
+            <div class="titulo-container" id="titulo-hora">
+                <h1><i class="fa-solid fa-circle-info" id="info"></i></h1>
             </div>
             <div class="horas borda" id="cafe">
                 <p>8:00</p>
@@ -39,7 +42,7 @@
             </div>
             <div class="horas borda" id="jantar">
                 <p>17:00</p>
-                <p>Lanche da Tarde</p>
+                <p>Jantar</p>
                 <p>20:00</p>
             </div>
         </div>
@@ -108,7 +111,8 @@
             <div class="refeicao" id="jantarSabado"></div>
         </div>
     </section>
-    <script src="components/main.js"></script>
+    <script src="https://kit.fontawesome.com/f993179993.js" crossorigin="anonymous"></script>
+    <script type="module" src="components/main.js"></script>
 </body>
 
 </html>
