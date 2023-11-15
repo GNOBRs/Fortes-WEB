@@ -1,4 +1,8 @@
-function Refeicao(numero) {
+function Refeicao() {
+    const chamaFuncao = CheckTime();
+
+    const diaAtual = chamaFuncao.diaAtual;
+
     document.querySelector(`#pop`).insertAdjacentHTML('beforeend',
         `<h1 style="text-align: center;">Refeição atual</h1>
         <ul>
