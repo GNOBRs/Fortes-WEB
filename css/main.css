@@ -1,7 +1,8 @@
 .pop-up {
     position: absolute;
-    display: none;
-    top: 30vh;
+    opacity: 0;
+    visibility: hidden;
+    top: 20vh;
     left: 30vw;
     width: 40vw;
     height: 40vh;
@@ -10,6 +11,7 @@
     background-color: var(--cor-fundo-foco);
     box-shadow: .2rem .2rem 20px black;
     padding: 1.5rem;
+    transition: all .2s ease;
 }
 
 #info {
@@ -30,7 +32,25 @@ button>i {
 }
 
 .abrePopUp {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    top: 30vh;
+}
+
+.textoInfo {
+    margin: .8rem;
+}
+
+.container-refeicao-atual {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexEnd {
+    align-self: center;
 }
 
 input[type='radio'] {
@@ -127,7 +147,7 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 .refeicao.ativo:hover {

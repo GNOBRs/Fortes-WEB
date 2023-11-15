@@ -16,6 +16,6 @@ const info = document.querySelector(`#info`);
 info.addEventListener("click", TogglePopUp);
 info.addEventListener("click", Info);
 
-const refeicao = document.querySelector(".refeicao.ativo");
+var refeicao = document.querySelector(".refeicao.ativo");
 refeicao.addEventListener("click", TogglePopUp);
 refeicao.addEventListener("click", Refeicao);

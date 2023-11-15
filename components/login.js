@@ -8,7 +8,7 @@ function verificarLogin(event) {
     const login = document.querySelector("#login").value.trim()
     const senha = document.querySelector("#senha").value.trim()
 
-    if (login == 'cliente@fortes.com.br' && senha == 'rute') {
+    if (login == 'funcionario@fortes.com.br' && senha == 'rute') {
         window.location.href = "/main.html"
     }
     else if (login == 'fornecedor@fortes.com.br' && senha == 'root') {
