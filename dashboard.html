@@ -11,47 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        #dashboard {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        #charts-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .chart {
-            flex: 1;
-            text-align: center;
-            margin: 10px;
-        }
-    </style>
 </head>
 
 <body>
-
-    <div id="dashboard">
-        <h1>Alimentação</h1>
+    <div class="conteudo" id="dashboard">
+        <nav class="navbar">
+            <div class="navbar_content">
+                <a href="admin.html">Administração</a>
+                <a href="main.html">Agenda</a>
+                <a href="dashboard.html" style="color: rgb(52, 55, 255);">Dashboard</a>
+                <a href="editorRefeicao.html">Editor de Refeições</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+        </nav>
+        <h1>Dashboard</h1>
 
         <div id="numbers">
             <p>Pessoas alimentadas hoje: <span id="dayCount">0</span></p>
@@ -69,84 +45,7 @@
         </div>
 
     </div>
-
-    <script>
-        // Função para gerar dados aleatórios
-        function generateRandomData(length) {
-            const randomData = [];
-            for (let i = 0; i < length; i++) {
-                randomData.push(Math.floor(Math.random() * (100 - 20 + 1)) + 20); // Gera números aleatórios entre 20 e 100
-            }
-            return randomData;
-        }
-
-        // Simulando dados aleatórios
-        const data = {
-            day: generateRandomData(1),
-            week: generateRandomData(7),
-            month: generateRandomData(30)
-        };
-
-        // Função para gerar gráfico usando Chart.js
-        function generateChart(containerId, label, data, xLabels) {
-            const container = document.getElementById(containerId);
-
-            const chartContainer = document.createElement("div");
-            container.appendChild(chartContainer);
-
-            const canvas = document.createElement("canvas");
-            chartContainer.appendChild(canvas);
-
-            const ctx = canvas.getContext("2d");
-
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: xLabels,
-                    datasets: [{
-                        label: 'Pessoas Alimentadas',
-                        data: data,
-                        fill: false,
-                        borderColor: '#4CAF50',
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        x: {
-                            type: 'category', // Altera o tipo de escala para categoria
-                            labels: containerId === 'weekChart' ? ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'] : ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'], // Substitui os números pelos dias da semana
-                        }
-                    },
-                    plugins: {
-                        tooltip: {
-                            callbacks: {
-                                label: function (context) {
-                                    return 'Pessoas: ' + context.parsed.y;
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        }
-
-        // Função para atualizar os números na página
-        function updateNumbers() {
-            document.getElementById("dayCount").innerText = data.day.reduce((a, b) => a + b, 0);
-            document.getElementById("weekCount").innerText = data.week.reduce((a, b) => a + b, 0);
-            document.getElementById("monthCount").innerText = data.month.reduce((a, b) => a + b, 0);
-        }
-
-        // Gera os gráficos iniciais
-        generateChart("weekChart", ["Semana"], data.week);
-        generateChart("monthChart", ["Mês"], data.month, Array.from({ length: 12 }, (_, i) => i + 1));
-
-        // Atualiza os números na inicialização
-        updateNumbers();
-    </script>
-
+    <script src="/components/dashboard.js"></script>
 </body>
 
 </html>
