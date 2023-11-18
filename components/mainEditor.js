@@ -2,6 +2,11 @@ import TogglePopUp from "./popUp.js";
 import InfoEditor from "./infoEditor.js";
 import EditorRefeicao from "./editorRefeicao.js";
 
+const voltar = document.querySelector(`#voltar`)
+voltar.addEventListener("click", function () {
+    history.back();
+});
+
 const x = document.querySelector(`#x`);
 x.addEventListener("click", TogglePopUp);
 
