@@ -1,9 +1,9 @@
 # Fortes-WEB
-  
+
   <p>Trabalho de WEB para a empresa Fortes Engenharia</p>
 
 # Login
-  
+
   <p>Tela de login simples.</p>
   <ul>Logins:
     <li>"funcionario@fortes.com.br"</li>
@@ -13,6 +13,13 @@
     <li>"rute"</li>
     <li>"root"</li>
   </ul>
+
+# Tela administrador
+
+  <p>Página principal: Dashboard</p>
+  <p>Sistema de edição de refeição</p>
+  <p>Cadastro de funcionário</p>
+  
     
 # Tela principal funcionário
   

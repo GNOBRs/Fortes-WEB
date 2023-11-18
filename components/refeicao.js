@@ -1,9 +1,7 @@
-import CheckTime from "./checkTime.js";
+import TogglePopUp from "./popUp.js";
 
 function Refeicao() {
-    const chamaFuncao = CheckTime();
-
-    const diaAtual = chamaFuncao.diaAtual;
+    TogglePopUp();
 
     const elementoFilhoDia = document.querySelector(".refeicao.ativo").innerHTML
 

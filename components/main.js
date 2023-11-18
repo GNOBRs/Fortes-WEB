@@ -1,6 +1,6 @@
 import SetAtivo from "./setAtivo.js";
 import TogglePopUp from "./popUp.js";
-import Info from "./info.js";
+import InfoAgenda from "./infoAgenda.js";
 import Refeicao from "./refeicao.js";
 
 for (var i = 0; i <= 0; i++) {
@@ -13,9 +13,7 @@ const x = document.querySelector(`#x`);
 x.addEventListener("click", TogglePopUp);
 
 const info = document.querySelector(`#info`);
-info.addEventListener("click", TogglePopUp);
-info.addEventListener("click", Info);
+info.addEventListener("click", InfoAgenda);
 
 var refeicao = document.querySelector(".refeicao.ativo");
-refeicao.addEventListener("click", TogglePopUp);
 refeicao.addEventListener("click", Refeicao);

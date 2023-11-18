@@ -37,29 +37,12 @@
     margin: .8rem;
 }
 
-.container-refeicao-atual {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.flexEnd {
-    align-self: center;
-}
-
-input[type='radio'] {
-    accent-color: var(--cor-fundo-corpo);
-}
-
 .conteudo {
     display: grid;
     grid-template-columns: 6% repeat(7, 1fr);
     grid-template-rows: 1fr;
     z-index: 0;
-    height: 100vh;
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .dia {
@@ -67,7 +50,6 @@ input[type='radio'] {
     grid-template-columns: 1fr;
     grid-template-rows: 4rem repeat(4, 1fr);
     padding: 5px;
-    border-right: 2px dashed black;
 }
 
 .horas {
@@ -84,11 +66,6 @@ input[type='radio'] {
 
 .borda {
     border-bottom: 2px dotted black;
-}
-
-.ativo {
-    background-color: var(--cor-fundo-corpo);
-    border-radius: 3px;
 }
 
 .titulo-container {
@@ -135,22 +112,13 @@ input[type='radio'] {
 
 #sabado {
     grid-area: 1 / 8;
+    border-right: none;
 }
 
 h1 {
     text-align: center;
     font-size: 1.5rem;
     margin: 1.4rem;
-}
-
-h2 {
-    margin: 1rem;
-}
-
-.refeicao.ativo:hover {
-    box-shadow: .2rem .2rem 40px black;
-    outline: 2px outset var(--cor-borda-focus);
-    cursor: pointer;
 }
 
 .refeicao {
@@ -162,10 +130,55 @@ h2 {
     border-bottom: 2px dotted black;
 }
 
+.refeicao:hover {
+    box-shadow: .2rem .2rem 40px black;
+    outline: 2px outset rgb(52, 55, 255);
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgb(194, 194, 194);
+}
+
 .jantar {
     border-bottom: none;
 }
 
 .comida {
     padding: 0 .3rem;
+}
+
+.inputEditor {
+    width: 70%;
+    height: 100%;
+    resize: none;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.inputEditor:focus {
+    outline: none;
+    border: 2px solid rgb(52, 55, 255);
+}
+
+#salvarButton {
+    font-size: 1.2rem;
+    outline: none;
+    border: 2px outset black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#salvarButton:hover {
+    border: 2px inset rgb(52, 55, 255);
+    background-color: rgb(194, 194, 194);
+}
+
+.popUpContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
