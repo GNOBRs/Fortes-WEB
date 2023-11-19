@@ -25,15 +25,25 @@
                 <a href="cadastro.html" style="color: rgb(52, 55, 255);">Cadastro</a>
             </div>
         </nav>
-        <form>
-            <label for="nome">Nome Completo</label>
-            <input type="text" name="nome" id="">
-            <label for="cpf">CPF</label>
-            <input type="text">
-            <label for="telefone">Telefone</label>
-            <input type="tel">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="">
+        <h1>Cadastro de funcionário</h1>
+        <form class="formulario">
+            <div class="formulario-content">
+                <label for="nome">Nome Completo</label>
+                <br>
+                <input type="text" name="nome" id="">
+            </div>
+            <div class="formulario-content">
+                <label for="cpf">CPF</label><br>
+                <input type="text" name="cpf">
+            </div>
+            <div class="formulario-content">
+                <label for="telefone">Telefone</label><br>
+                <input type="tel" name="telefone">
+            </div>
+            <div class="formulario-content">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="">
+            </div>
             <button type="submit" id="salvar">Salvar</button>
         </form>
     </div>
