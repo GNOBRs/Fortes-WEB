@@ -1,0 +1,48 @@
+.conteudo {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.formulario {
+    float: center;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+    font-size: 1.3rem;
+}
+
+.formulario-content {
+    width: 100%;
+    margin: 1rem;
+}
+
+#pesquisar {
+    font-size: 1.2rem;
+    outline: none;
+    border: 2px inset black;
+    border-radius: .4rem;
+}
+
+#pesquisar:hover {
+    border: 2px inset var(--cor-borda-focus);
+    box-shadow: 0 0 5px var(--cor-borda-focus);
+    background-color: rgb(219, 219, 219)
+}
+
+input {
+    width: 60%;
+    font-size: 1.3rem;
+    outline: none;
+    border: 2px inset black;
+    border-radius: 3px;
+}
