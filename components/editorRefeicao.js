@@ -4,8 +4,6 @@ import RefeicaoEditor from "./refeicaoEditor.js";
 function EditorRefeicao(refeicao) {
     TogglePopUp();
 
-    console.log(refeicao)
-
     const comida = document.querySelector(`#${refeicao}`);
 
     document.querySelector(`#pop`).insertAdjacentHTML('beforeend',
@@ -16,12 +14,12 @@ function EditorRefeicao(refeicao) {
             <button type="submit" id="salvarButton">Salvar</button>
         </form>
         `);
-    
+
     document.getElementById("comidaRefeicao").addEventListener("focusout",
-    function (event) {
-        event.preventDefault();
-        RefeicaoEditor(refeicao);
-    });
+        function (event) {
+            event.preventDefault();
+            RefeicaoEditor(refeicao);
+        });
 }
 
 export default EditorRefeicao;
