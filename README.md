@@ -59,3 +59,4 @@
 # Bugs conhecidos
   
   <p>Quando a mudança ocorre automaticamente sem atualização da página, o botão que mostra a refeição em destaque fica na posição anterior, apesar do destaque ter mudado</p>
+  <p>Na página de edição de refeições, caso o usuário não altere o valor do textarea a página atualiza</p>
