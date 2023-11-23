@@ -1,71 +1,37 @@
 body {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    background-image: url(../assets/IMG-20220504-WA0002.jpg);
 }
 
-#form {
-    grid-area: 2 / 2 / span 1 / span 1;
+.navbar {
+    width: 100%;
+    height: 5rem;
+    box-shadow: 0px 15px 10px -15px black;
+    margin-bottom: 3rem;
     background-color: var(--cor-fundo-foco);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 4rem;
+    width: calc(100vw - 8rem);
     align-items: center;
-    justify-content: center;
+}
+
+.navbar_content {
+    height: 80%;
+}
+
+a {
     font-size: 1.2rem;
     font-weight: 500;
-    border-radius: 7px;
-    padding: 2rem;
-    min-height: 40vh;
-    width: 100%;
-}
-
-#logomarca {
-    max-width: 20rem;
-}
-
-div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-}
-
-#divCima {
-    margin-bottom: 1.4rem;
-}
-
-input {
-    border-radius: 5px;
-    border: 2px inset black;
-    height: 1.5rem;
-    width: 70%;
-    font-size: 1.1rem;
-    outline: none;
-    padding: .1rem .3rem;
-}
-
-input:focus {
-    border: 2px inset var(--cor-borda-focus);
-}
-
-.active {
-    margin: 1rem;
-    color: red;
-    font-weight: 600;
-    height: 1rem;
-}
-
-#botaoLogin {
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: .2rem .4rem;
+    padding: .4rem;
+    text-decoration: none;
+    color: inherit;
     border-radius: .4rem;
     border: 2px outset black;
-    margin-bottom: 1.4rem;
     outline: none;
     background-color: var(--cor-fundo-foco);
 }
 
-#botaoLogin:hover {
+a:hover {
     border: 2px inset var(--cor-borda-focus);
     box-shadow: 2px 2px 5px var(--cor-borda-focus);
     background-color: rgb(219, 219, 219)

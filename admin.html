@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pesquisa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -18,10 +18,10 @@
     <div class="conteudo">
         <nav class="navbar">
             <div class="navbar_content">
-                <a href="admin.html" style="color: rgb(52, 55, 255);">Administração</a>
-                <a href="main.html">Agenda</a>
                 <a href="dashboard.html">Dashboard</a>
+                <a href="main.html">Agenda</a>
                 <a href="editorRefeicao.html">Editor de Refeições</a>
+                <a href="admin.html" style="color: rgb(52, 55, 255);">Pesquisa</a>
                 <a href="cadastro.html">Cadastro</a>
             </div>
         </nav>
@@ -43,6 +43,12 @@
             <div class="formulario-content">
                 <label for="email-input">Email</label><br>
                 <input type="email" name="email" id="email-input" placeholder="ana.silva@email.com" maxlength="50" readonly>
+            </div>
+            <div class="formulario-checkbox">
+                <label for="funcionario">Funcionário</label>
+                <input type="checkbox" name="" id="funcionario">
+                <label for="admin">Administrador</label>
+                <input type="checkbox" name="" id="admin">
             </div>
             <button type="submit" id="pesquisar">Pesquisar</button>
         </form>
