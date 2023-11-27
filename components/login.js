@@ -12,7 +12,7 @@ function verificarLogin(event) {
         window.location.href = "main.html"
     }
     else if (login == 'fornecedor@fortes.com.br' && senha == 'root') {
-        window.location.href = "admin.html"
+        window.location.href = "dashboard.html"
     } else {
         document.querySelector("#aviso").innerHTML = 'Login ou senha errados'
     }
