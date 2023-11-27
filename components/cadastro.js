@@ -1,3 +1,15 @@
+const cpfCampo = document.querySelector(`#cpf-input`);
+const cpfMask = new Cleave(cpfCampo, {
+    delimiters: ['.', '.', '-'],
+    blocks: [3, 3, 3, 2]
+});
+
+const telefoneCampo = document.querySelector(`#phone-input`);
+const telefoneMask = new Cleave(telefoneCampo, {
+    delimiters: ['(', ')', ' ', '-'],
+    blocks: [0, 2, 0, 5, 4]
+});
+
 document.querySelector("#salvar").addEventListener("click", function (event) {
     event.preventDefault();
 
